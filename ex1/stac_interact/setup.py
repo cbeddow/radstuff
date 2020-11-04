@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-setup(
+setup_args = dict(
   author="Chris Beddow",
   author_email='christopher.beddow@gmail.com',
   classifiers=[
@@ -18,3 +18,6 @@ setup(
   version='0.1.0',
   zip_safe=False,
 )
+
+if __name__ == '__main__':
+    setup(**setup_args, install_requires=install_requires)
